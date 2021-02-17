@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatButtonModule} from '@angular/material/button';
 import { MaterialComponent } from './material/material.component'
 import {MatSliderModule} from '@angular/material/slider';
-import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component'
+import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component';
+import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child-comp-event-emitter.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component
     BootstrapTutorialComponent,
     MaterialComponent,
     ChildCompAppComponent,
+    ChildCompEventEmitterComponent,
   ],
   imports: [
     BrowserModule,

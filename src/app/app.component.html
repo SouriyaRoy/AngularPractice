@@ -4,4 +4,16 @@
 <!-- <app-forms></app-forms> -->
 <!-- <app-bootstrap-tutorial></app-bootstrap-tutorial> -->
 <!-- <app-material></app-material> -->
-<app-child-comp-app [data] = "data"></app-child-comp-app>
+<h2>Data passing from Parent to Child Component</h2>
+<table border="1">
+    <thead style="background-color: aqua;">
+        <td>Name</td>
+        <td>Age</td>
+        <td>Place</td>
+    </thead>
+    <tbody style="background-color: chartreuse; width:100%;">
+        <div *ngFor = "let data of users">
+            <app-child-comp-app [one_user] = "data"></app-child-comp-app> <!--send the data like this binding-->
+        </div>
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core'; //Input for taking the data from the parent class
 
 @Component({
   selector: 'app-child-comp-app',
@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildCompAppComponent implements OnInit {
 
-  @Input() data
+  @Input() one_user
   constructor() { }
 
   ngOnInit(): void {
