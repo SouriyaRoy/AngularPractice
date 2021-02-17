@@ -1,0 +1,20 @@
+<h1>User's Login Component</h1>
+<button (click) = "getName('Tuttu')">Get my name</button> Gives a console log with Name
+<br><br>
+<input type="text" #thisEvent><button (click) = "getName(thisEvent.value)">Get the value</button> Enter a name then click
+<h3>{{currentVal}}</h3>
+<input type="text" [disabled] = disabledBox [value]=prop> <!--property binding works on this only-->
+<br>
+<input type="text" disabled = {{disabledBox}} value={{prop}}>
+<br>
+<button (click) = "enableBox()">Enable Textbox</button>
+<!--(keyup.enter) = "getName(thisEvent.value)"-->
+<br>
+
+<h1>Switch Case</h1>
+<div [ngSwitch] = "color">
+    <h3 style="color: red;" *ngSwitchCase = "'red'">Red Color</h3>
+    <h3 style="color: green;" *ngSwitchCase = "'green'">Green Color</h3>
+    <h3 style="color: blue;" *ngSwitchCase = "'blue'">Blue Color</h3>
+    <h3 style="color: orangered;" *ngSwitchCase = "'orange'">Orange Color</h3>
+</div>
