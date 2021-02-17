@@ -1,0 +1,15 @@
+<h2>Data passing from Parent to Child Component</h2>
+<table border="1">
+    <thead style="background-color: aqua;">
+        <td>Name</td>
+        <td>Age</td>
+        <td>Place</td>
+    </thead>
+    <tbody style="background-color: chartreuse;">
+        <tr *ngFor = "let item of data">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.place}}</td>
+        </tr>
+    </tbody>
+</table>
