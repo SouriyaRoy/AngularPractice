@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TestProj';
+  //title = 'TestProj';
+  public data;
   users = [
     {
       name:'Souriya',
@@ -30,4 +31,8 @@ export class AppComponent {
     }
   ]
 
+  parentComponent(data) {
+    console.warn(data)
+    this.data = data.name
+  }
 }

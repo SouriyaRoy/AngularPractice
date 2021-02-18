@@ -1,10 +1,12 @@
 <h1>Angular Tutorial</h1>
-<!-- <app-login></app-login>
-<app-signup></app-signup> -->
+<!-- <app-login></app-login> -->
+<!-- <app-signup></app-signup> -->
 <!-- <app-forms></app-forms> -->
 <!-- <app-bootstrap-tutorial></app-bootstrap-tutorial> -->
 <!-- <app-material></app-material> -->
-<h2>Data passing from Parent to Child Component</h2>
+
+
+<!-- <h2>Data passing from Parent to Child Component</h2>
 <table border="1">
     <thead style="background-color: aqua;">
         <td>Name</td>
@@ -14,6 +16,11 @@
     <tbody style="background-color: chartreuse; width:100%;">
         <div *ngFor = "let data of users">
             <app-child-comp-app [one_user] = "data"></app-child-comp-app> <!--send the data like this binding-->
-        </div>
-    </tbody>
-</table>
+        <!--</div>-->
+        <!-- <app-child-comp-app [one_user] = "users"></app-child-comp-app> -->
+    <!--</tbody>
+</table> -->
+
+
+<app-child-comp-event-emitter (parentComponent) = "parentComponent($event)"></app-child-comp-event-emitter>
+<h3>{{data}}</h3>

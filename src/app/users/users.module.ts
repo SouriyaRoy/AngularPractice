@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
   exports: [
     LoginComponent,
     SignupComponent,
-    FormsComponent 
+    FormsComponent
   ]
 })
 export class UsersModule { }

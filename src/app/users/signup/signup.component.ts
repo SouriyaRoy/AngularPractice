@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  public condition1 = true;
+  public condition1 = false;
   public options = "green";
   public data = [
     {
