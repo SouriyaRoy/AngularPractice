@@ -22,5 +22,17 @@
 </table> -->
 
 
-<app-child-comp-event-emitter (parentComponent) = "parentComponent($event)"></app-child-comp-event-emitter>
-<h3>{{data}}</h3>
+<!-- <app-child-comp-event-emitter (parentComponent) = "parentComponent($event)"></app-child-comp-event-emitter>
+<h3>{{data}}</h3> -->
+
+<!-- <a routerLink = "bootstarp-tutorial">BootStrap</a>
+<a routerLink = "material">Material</a>
+<a routerLink = "login">login</a>
+<a routerLink = "signup">signup</a>
+<br> -->
+<button mat-raised-button color="accent" routerLink = "bootstarp-tutorial">BootStrap</button>
+<button mat-raised-button color="accent" routerLink = "material">Material</button>
+<button mat-raised-button color="accent" routerLink = "login">Login</button>
+<button mat-raised-button color="accent" routerLink = "signup">Signup</button>
+
+<router-outlet></router-outlet>

@@ -10,7 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { MaterialComponent } from './material/material.component'
 import {MatSliderModule} from '@angular/material/slider';
 import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component';
-import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child-comp-event-emitter.component'
+import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child-comp-event-emitter.component';
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
