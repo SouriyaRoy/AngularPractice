@@ -5,6 +5,7 @@ import { BootstrapTutorialComponent } from './bootstrap-tutorial/bootstrap-tutor
 import { MaterialComponent } from './material/material.component'
 import { LoginComponent } from './users/login/login.component'
 import { SignupComponent } from './users/signup/signup.component'
+import { ErrorComponent } from './error/error.component'
 
 const routes: Routes = [
   {
@@ -22,7 +23,11 @@ const routes: Routes = [
   {
     path : 'signup',
     component:SignupComponent
-  }
+  },
+  // {
+  //   path : '**', //wildcard, when a route is not found this page opens by default
+  //   component:ErrorComponent
+  // }
 ];
 
 @NgModule({

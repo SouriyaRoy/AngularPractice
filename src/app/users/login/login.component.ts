@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersdataService } from 'src/app/users/usersdata.service'
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ export class LoginComponent implements OnInit {
   prop = "BRUCE"
   disabledBox = true;
   color = "orange"
+  public data
 
   getName(name : any) { //this function will work only when it's performed in the same component
     console.log(name);
@@ -20,7 +22,9 @@ export class LoginComponent implements OnInit {
     this.disabledBox = false
   }
 
-  constructor() { }
+  constructor(private user : UsersdataService) {
+    this.data = this.user.getData();
+   }
 
   ngOnInit(): void {
   }

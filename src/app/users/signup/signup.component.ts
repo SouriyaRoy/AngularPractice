@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersdataService } from 'src/app/users/usersdata.service'
 
 @Component({
   selector: 'app-signup',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
+  public name; 
+  data2;
   public condition1 = false;
   public options = "green";
   public data = [
@@ -36,7 +38,13 @@ export class SignupComponent implements OnInit {
     console.warn(evt);
   }
 
-  constructor() { }
+  constructor(private user : UsersdataService) {
+    this.user.getData().subscribe(data3 => {
+      console.warn(data3)
+    })
+    // console.warn(this.user.getData())
+    // this.data2 = this.user.getData()
+   }
 
   ngOnInit(): void {
   }

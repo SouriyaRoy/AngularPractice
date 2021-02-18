@@ -11,7 +11,9 @@ import { MaterialComponent } from './material/material.component'
 import {MatSliderModule} from '@angular/material/slider';
 import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component';
 import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child-comp-event-emitter.component';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module'
     MaterialComponent,
     ChildCompAppComponent,
     ChildCompEventEmitterComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { AppRoutingModule } from './app-routing.module'
     BrowserAnimationsModule,
     MatButtonModule,
     MatSliderModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
