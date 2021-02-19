@@ -7,29 +7,29 @@ import { getAllJSDocTags } from 'typescript';
 })
 export class UsersdataService {
 
-  // getData() {
-  //   return [
-  //   {
-  //     name:'Souriya',
-  //     age:22,
-  //     place:'Kolkata'
-  //   },
-  //   {
-  //     name:'Akash',
-  //     age:21,
-  //     place:'Belgharia'
-  //   },
-  //   {
-  //     name:'Joyjit',
-  //     age:21,
-  //     place:'Siliguri'
-  //   },
-  //   {
-  //     name:'Sanyam',
-  //     age:19,
-  //     place:'Sinthi More'
-  //   }]
-  // }
+  getUserData() {
+    return [
+    {
+      name:'Souriya',
+      age:22,
+      place:'Kolkata'
+    },
+    {
+      name:'Akash',
+      age:21,
+      place:'Belgharia'
+    },
+    {
+      name:'Joyjit',
+      age:21,
+      place:'Siliguri'
+    },
+    {
+      name:'Sanyam',
+      age:19,
+      place:'Sinthi More'
+    }]
+  }
 
   constructor(private http : HttpClient) {   }
   getData() {

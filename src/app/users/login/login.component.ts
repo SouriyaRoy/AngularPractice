@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(private user : UsersdataService) {
-    this.data = this.user.getData();
+    this.data = this.user.getUserData();
    }
 
   ngOnInit(): void {

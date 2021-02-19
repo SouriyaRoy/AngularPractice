@@ -6,6 +6,7 @@ import { MaterialComponent } from './material/material.component'
 import { LoginComponent } from './users/login/login.component'
 import { SignupComponent } from './users/signup/signup.component'
 import { ErrorComponent } from './error/error.component'
+import { APICallComponent } from './api-call/api-call.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path : 'signup',
     component:SignupComponent
+  },
+  {
+    path : 'apicall',
+    component:APICallComponent
   },
   // {
   //   path : '**', //wildcard, when a route is not found this page opens by default

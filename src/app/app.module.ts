@@ -13,7 +13,8 @@ import { ChildCompAppComponent } from './child-comp-app/child-comp-app.component
 import { ChildCompEventEmitterComponent } from './child-comp-event-emitter/child-comp-event-emitter.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error.component'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { APICallComponent } from './api-call/api-call.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http'
     ChildCompAppComponent,
     ChildCompEventEmitterComponent,
     ErrorComponent,
+    APICallComponent,
   ],
   imports: [
     BrowserModule,

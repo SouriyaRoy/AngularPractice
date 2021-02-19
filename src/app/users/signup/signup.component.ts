@@ -38,13 +38,14 @@ export class SignupComponent implements OnInit {
     console.warn(evt);
   }
 
-  constructor(private user : UsersdataService) {
-    this.user.getData().subscribe(data3 => {
-      console.warn(data3)
-    })
-    // console.warn(this.user.getData())
-    // this.data2 = this.user.getData()
+  constructor(private user : UsersdataService) {    
+    console.warn(this.user.getUserData())
+    this.data2 = this.user.getUserData()
    }
+  //  private user : UsersdataService
+  //   this.user.getData().subscribe(data3 => {
+  //     console.warn(data3)
+  //   }
 
   ngOnInit(): void {
   }

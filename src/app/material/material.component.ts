@@ -18,7 +18,7 @@ export class MaterialComponent implements OnInit {
     return value;
   }
   constructor(private user : UsersdataService) {
-    this.data = this.user.getData();
+    this.data = this.user.getUserData();
    }
 
   ngOnInit(): void {
