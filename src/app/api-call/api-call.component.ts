@@ -8,12 +8,11 @@ import { UsersdataService } from 'src/app/users/usersdata.service'
 })
 export class APICallComponent implements OnInit {
 
-  public api
+  public data; 
 
-  constructor(private user : UsersdataService) { 
+  constructor(private user : UsersdataService) {
     this.user.getData().subscribe(data => {
-      console.warn(data);
-      this.api = data;
+      this.data = data
     })
   }
 
@@ -21,3 +20,8 @@ export class APICallComponent implements OnInit {
   }
 
 }
+
+// this.user.getData().subscribe(data => {
+//   console.warn(data);
+//   this.api = data;
+// })
