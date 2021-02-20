@@ -17,8 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { APICallComponent } from './api-call/api-call.component';
 import { Test1Component } from './modular-routing/test1/test1.component';
 import { Test2Component } from './modular-routing/test2/test2.component'
-import { ModularRoutingModule } from './modular-routing/modular-routing.module'
-import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
+//import { ModularRoutingModule } from './modular-routing/modular-routing.module'
+//import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
 
 @NgModule({
   declarations: [
@@ -41,8 +41,8 @@ import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.mod
     MatSliderModule,
     AppRoutingModule,
     HttpClientModule,
-    ModularRoutingModule,
-    ModularRouting2Module,
+    //ModularRoutingModule,
+    //ModularRouting2Module,
   ],
   providers: [],
   bootstrap: [AppComponent]

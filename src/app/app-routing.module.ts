@@ -29,6 +29,17 @@ const routes: Routes = [
     path : 'apicall',
     component:APICallComponent
   },
+  {
+    path : 'module2', loadChildren:() => import ('./modular-routing-2/modular-routing-2.module')
+    .then(mod => mod.ModularRouting2Module)   
+    //lazy loading, when required this module will be loaded or else not
+  },
+  {
+    path : 'module1', loadChildren:() => import ('./modular-routing/modular-routing.module')
+    .then(mod => mod.ModularRoutingModule)  
+    //lazy loading, when required this module will be loaded or else not
+  },
+
   // {
   //   path : '**', //wildcard, when a route is not found this page opens by default
   //   component:ErrorComponent
