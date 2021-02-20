@@ -32,12 +32,15 @@
 <br> -->
 
 <div class="example-button-row">
-    <button mat-raised-button color="accent" routerLink = "bootstarp-tutorial">BootStrap</button>
+    
     <button mat-raised-button color="accent" routerLink = "material">Material</button>
     <button mat-raised-button color="accent" routerLink = "login">Login</button>
     <button mat-raised-button color="accent" routerLink = "signup">Signup</button>
     <button mat-raised-button color="accent" routerLink = "about">About</button>
+    <button mat-raised-button color="accent" routerLink = "bootstarp-tutorial" >BootStrap</button>
     <button mat-raised-button color="accent" routerLink = "apicall">CallAPI</button>
+    <button mat-raised-button color="accent" (click) = "loadLazy1()">LazyComp_1</button>
+    <button mat-raised-button color="accent" (click) = "loadLazy2()">LazyComp_2</button>
     <button mat-raised-button color="accent" routerLink = "module1/test1">Module 1 Test1</button>
     <button mat-raised-button color="accent" routerLink = "module1/test2">Module 1 Test2</button>
     <button mat-raised-button color="accent" routerLink = "module2/test1">Module 2 Test1</button>
@@ -45,4 +48,6 @@
 </div>
 <router-outlet></router-outlet>
 
-
+<!-- (click) = "loadBoot()"
+(click) = "loadApi()" 
+routerLink = "bootstarp-tutorial"-->

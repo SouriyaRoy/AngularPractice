@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -34,5 +34,25 @@ export class AppComponent {
   parentComponent(data) {
     console.warn(data)
     this.data = data.name
+  }
+
+  constructor(private viewContainer : ViewContainerRef,
+    private cfr : ComponentFactoryResolver) {
+
+  }
+
+  async loadLazy1() {
+    this.viewContainer.clear();
+    const { Lazy1Component } = await import ('./lazy1/lazy1.component');
+    this.viewContainer.createComponent(
+      this.cfr.resolveComponentFactory(Lazy1Component)
+    )
+  }
+  async loadLazy2() {
+    this.viewContainer.clear();
+    const { Lazy2Component } = await import ('./lazy2/lazy2.component');
+    this.viewContainer.createComponent(
+      this.cfr.resolveComponentFactory(Lazy2Component)
+    )
   }
 }

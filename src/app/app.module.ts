@@ -16,7 +16,9 @@ import { ErrorComponent } from './error/error.component'
 import { HttpClientModule } from '@angular/common/http';
 import { APICallComponent } from './api-call/api-call.component';
 import { Test1Component } from './modular-routing/test1/test1.component';
-import { Test2Component } from './modular-routing/test2/test2.component'
+import { Test2Component } from './modular-routing/test2/test2.component';
+import { Lazy1Component } from './lazy1/lazy1.component';
+import { Lazy2Component } from './lazy2/lazy2.component'
 //import { ModularRoutingModule } from './modular-routing/modular-routing.module'
 //import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
 
@@ -31,6 +33,8 @@ import { Test2Component } from './modular-routing/test2/test2.component'
     APICallComponent,
     Test1Component,
     Test2Component,
+    Lazy1Component,
+    Lazy2Component,
   ],
   imports: [
     BrowserModule,
