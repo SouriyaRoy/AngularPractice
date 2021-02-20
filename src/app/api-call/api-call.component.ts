@@ -14,6 +14,7 @@ export class APICallComponent implements OnInit {
     this.user.getData().subscribe(data => {
       this.data = data
     })
+    //console.warn("Api Component Loaded via Lazy Loading")
   }
 
   ngOnInit(): void {

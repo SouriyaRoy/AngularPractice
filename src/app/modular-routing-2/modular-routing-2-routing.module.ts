@@ -6,16 +6,12 @@ import { Test2Component } from './test2/test2.component'
 
 const routes: Routes = [
   {
-    path:'modular-routing-2', children:[
-      {
-        path:'test1',
-        component:Test1Component
-      },
-      {
-        path:'test2',
-        component:Test2Component
-      }
-    ]
+    path:'test1',
+    component:Test1Component
+  },
+  {
+    path:'test2',
+    component:Test2Component
   }
 ];
 
@@ -24,3 +20,16 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class ModularRouting2RoutingModule { }
+
+// {
+//   path:'modular-routing-2', children:[
+//     {
+//       path:'test1',
+//       component:Test1Component
+//     },
+//     {
+//       path:'test2',
+//       component:Test2Component
+//     }
+//   ]
+// }

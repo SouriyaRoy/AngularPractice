@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 interface Alert {
   type: string;
   message: string;
@@ -41,6 +42,7 @@ export class BootstrapTutorialComponent implements OnInit {
 
   constructor() {
     this.reset();
+    //console.warn("Bootstrap-Tutorial Component Loaded via Lazy Loading")
   }
 
   close(alert: Alert) {
