@@ -41,18 +41,22 @@ export class AppComponent {
 
   }
 
-  async loadLazy1() {
-    this.viewContainer.clear();
-    const { Lazy1Component } = await import ('./lazy1/lazy1.component');
-    this.viewContainer.createComponent(
-      this.cfr.resolveComponentFactory(Lazy1Component)
-    )
-  }
-  async loadLazy2() {
-    this.viewContainer.clear();
-    const { Lazy2Component } = await import ('./lazy2/lazy2.component');
-    this.viewContainer.createComponent(
-      this.cfr.resolveComponentFactory(Lazy2Component)
-    )
+  // async loadLazy1() {
+  //   this.viewContainer.clear();
+  //   const { Lazy1Component } = await import ('./lazy1/lazy1.component');
+  //   this.viewContainer.createComponent(
+  //     this.cfr.resolveComponentFactory(Lazy1Component)
+  //   )
+  // }
+  // async loadLazy2() {
+  //   this.viewContainer.clear();
+  //   const { Lazy2Component } = await import ('./lazy2/lazy2.component');
+  //   this.viewContainer.createComponent(
+  //     this.cfr.resolveComponentFactory(Lazy2Component)
+  //   )
+  // }
+
+  onSubmit(data) {
+    console.warn(data)
   }
 }

@@ -39,6 +39,11 @@ const routes: Routes = [
     .then(mod => mod.ModularRoutingModule)  
     //lazy loading, when required this module will be loaded or else not
   },
+  {
+    path:'pracform', loadChildren:() => import ('./prac-form/prac-form.module')
+    .then(mod => mod.PracFormModule)
+    //lazy loading, when required this module will be loaded or else not
+  },
 
   // {
   //   path : '**', //wildcard, when a route is not found this page opens by default

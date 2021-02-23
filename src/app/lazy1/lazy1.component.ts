@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-console.warn("Lazy 1 Component loaded via Lazy Loading")
+//console.warn("Lazy 1 Component loaded via Lazy Loading")
 
 @Component({
   selector: 'app-lazy1',

@@ -39,13 +39,25 @@
     <button mat-raised-button color="accent" routerLink = "about">About</button>
     <button mat-raised-button color="accent" routerLink = "bootstarp-tutorial" >BootStrap</button>
     <button mat-raised-button color="accent" routerLink = "apicall">CallAPI</button>
-    <button mat-raised-button color="accent" (click) = "loadLazy1()">LazyComp_1</button>
-    <button mat-raised-button color="accent" (click) = "loadLazy2()">LazyComp_2</button>
+    <button mat-raised-button color="accent" routerLink = "pracform/boot_form">BootForm</button>
+    <button mat-raised-button color="accent" routerLink = "pracform/reactive_form">ReactiveForm</button>
+    <!-- <button mat-raised-button color="accent" (click) = "loadLazy1()">LazyComp_1</button>
+    <button mat-raised-button color="accent" (click) = "loadLazy2()">LazyComp_2</button> -->
     <button mat-raised-button color="accent" routerLink = "module1/test1">Module 1 Test1</button>
     <button mat-raised-button color="accent" routerLink = "module1/test2">Module 1 Test2</button>
     <button mat-raised-button color="accent" routerLink = "module2/test1">Module 2 Test1</button>
     <button mat-raised-button color="accent" routerLink = "module2/test2">Module 2 Test2</button>
 </div>
+
+
+<!-- <br><br>
+
+<form #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm.value)">
+    <input type="text" class="form-control" name="email" ngModel><br>
+    <input type="password" class="form-control" name="password" ngModel><br>
+    <button type="submit">Login</button>
+</form> -->
+
 <router-outlet></router-outlet>
 
 <!-- (click) = "loadBoot()"
