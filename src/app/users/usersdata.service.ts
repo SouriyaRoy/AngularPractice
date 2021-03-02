@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { getAllJSDocTags } from 'typescript';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +32,30 @@ export class UsersdataService {
 
   constructor(private http : HttpClient) {   }
   getData() {
-    let url = "https://jsonplaceholder.typicode.com/todos"
-    return this.http.get(url);
+    let get_url = "https://jsonplaceholder.typicode.com/todos"
+    return this.http.get(get_url);
   }
+  
+  postData(api_data){
+    let post_url = 'http://e8f6ffc08340.ngrok.io/api/user/user/'
+    let json = JSON.stringify(api_data)
+    return this.http.post(post_url, json)
+  }
+
+  // reqData(api_data){
+  //   let req_url = 'http://65.0.180.78/api/user/user/'
+  //   let json = JSON.stringify(api_data)
+  //   this.http.request(json, req_url).subscribe((result)=>{
+  //     console.warn("result",result)
+  //     });
+  // }
 }
+
+
+// (req_url, json).subscribe((result)=>{
+//   console.warn("result",result)
+//   });
+
+// .subscribe((result)=>{
+//   console.warn("result",result)
+//   });

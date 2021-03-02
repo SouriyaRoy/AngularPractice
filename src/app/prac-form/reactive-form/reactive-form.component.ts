@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { } from 'src/app/users/usersdata.service'
 
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
   styleUrls: ['./reactive-form.component.css']
 })
-export class ReactiveFormComponent implements OnInit {
+export class ReactiveFormComponent {
 
   loginForm = new FormGroup({
     email : new FormControl('', [Validators.required, Validators.email]),
@@ -16,19 +17,24 @@ export class ReactiveFormComponent implements OnInit {
   //obj = JSON.stringify(this.loginForm.value)
   key = "dosiiowjhiojijjwejfwjejpwfjwpf"
   user_email = this.loginForm.value.email
-  api_call : any
   json : any
-
+  api_call : any
 //   api_call = {
 //     "api" : {
 //       "version" : "1.0",
-//       "auth" : this.key
+//       "auth" : "7BtnG96eHgTe0W5ssKMXJ7PhKldUIcf6oGQ1v3EI8pOYJVACN5Om94AX3ncaY41r"
 //     },
 //     "data" : {
-//       "action" : "reactive_signup",
+//       "action" : "signup",
 //       "data" : {
 //         "data" : {
-//           "user_email" : this.user_email
+//           "user_f_name" : "Souriya",
+//           "user_m_name" : null,
+//           "user_l_name" : "Roy",
+//           "user_email" : "souriyaroy1998@gmail.com",
+//           "user_password" : "lulx",
+//           "user_security_question" : null,
+//           "user_security_answer" : null
 //       }
 //     }
 //   }
@@ -63,14 +69,8 @@ export class ReactiveFormComponent implements OnInit {
       }
     }
   }
-  this.json = JSON.stringify(this.api_call)
-  console.warn(this.api_call)
+  // this.json = JSON.stringify(this.api_call)
+  // console.warn(this.api_call)
+  // }
   }
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
