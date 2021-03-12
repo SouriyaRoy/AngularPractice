@@ -14,17 +14,17 @@ export class APICallComponent implements OnInit {
   api_call = {
     "api" : {
         "version" : "1.0",
-        "auth" : "7BtnG96eHgTe0W5ssKMXJ7PhKldUIcf6oGQ1v3EI8pOYJVACN5Om94AX3ncaY41r"
+        "auth" : "HHdK2z8XHjkjq7A1AzQFr7LHAVosx4uwkb6eBNzG5prwfxYEBd1dqI2oW0QN6SAg"
     },
     "data" : {
         "action" : "signup",
         "data" : {
             "data" : {
-                "user_f_name" : "Sfsfsfstd",
-                "user_m_name" : null,
-                "user_l_name" : "opopopop",
-                "user_email" : "fksssajsashu@gmail.com",
-                "user_password" : "guasaspta",
+                "user_f_name" : "tuttu",
+                "user_m_name" : null, 
+                "user_l_name" : "roy",
+                "user_email" : "ajsashu@gmail.com",
+                "user_password" : "gaaaaaaaaaaaaaaaaaata",
                 "user_security_question" : null,
                 "user_security_answer" : null
             }
@@ -77,8 +77,12 @@ export class APICallComponent implements OnInit {
   
   SubmitAPI(){
     this.user.postData(this.api_call).subscribe(data => {
-         console.warn(typeof(data));
-         console.warn(data['data']['hash']);
+         console.warn(data);
+         console.warn(data['data']['hash']); 
+
+         //string hash = data[data][hash]
+         //cookie.set('init',hash,12/8/21)
+
          //this.json = JSON.stringify(this.data)
          //console.warn(this.json)
          //this.json2 = JSON.parse(this.data)

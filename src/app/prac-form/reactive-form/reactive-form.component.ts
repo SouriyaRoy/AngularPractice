@@ -69,8 +69,8 @@ export class ReactiveFormComponent {
       }
     }
   }
-  // this.json = JSON.stringify(this.api_call)
-  // console.warn(this.api_call)
+   this.json = JSON.stringify(this.api_call)
+   console.warn(this.json)
   // }
   }
 }

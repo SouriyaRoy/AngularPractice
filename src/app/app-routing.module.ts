@@ -7,6 +7,7 @@ import { LoginComponent } from './users/login/login.component'
 import { SignupComponent } from './users/signup/signup.component'
 import { ErrorComponent } from './error/error.component'
 import { APICallComponent } from './api-call/api-call.component';
+import { FeedComponent } from './feed/feed.component'
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     path:'pracform', loadChildren:() => import ('./prac-form/prac-form.module')
     .then(mod => mod.PracFormModule)
     //lazy loading, when required this module will be loaded or else not
+  },
+  {
+    path:'feed',
+    component:FeedComponent
   },
 
   // {
