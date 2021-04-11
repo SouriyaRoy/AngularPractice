@@ -1,5 +1,5 @@
 <h1>API CALL DATA</h1>
-<button (click) = "SubmitAPI()">SubmitAPI</button>
+<button (click)="SubmitAPI()">SubmitAPI</button>
 
 
 <!-- <p>{{data.data.user_credential_id}}</p>
@@ -12,17 +12,21 @@
 <p>{{data.action}}</p> -->
 
 <!-- <button (click) = "reqAPI()">reqAPI</button> -->
-<!-- <table border="1" style="margin-left: 300px;" >
+<table border="1" style="margin-left: 300px;">
     <tr>
         <td>UserId</td>
         <td>PostId</td>
         <td>Title</td>
         <td>Status</td>
     </tr>
-    <tr *ngFor = "let item of data">
-        <td>{{item.userId}}</td>
+    <tr *ngFor="let item of data">
+        <td><a [routerLink] = '["../views",item.userId]'>{{item.userId}}</a></td>
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
         <td>{{item.completed}}</td>
     </tr>
-</table> -->
+</table>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<!-- <a routerLink = 'views,{{item.userId}}'></a> -->

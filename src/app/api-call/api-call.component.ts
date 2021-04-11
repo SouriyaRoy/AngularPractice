@@ -11,64 +11,10 @@ export class APICallComponent implements OnInit {
   public data
   public json; json2 
 
-  api_call = {
-    "api" : {
-        "version" : "1.0",
-        "auth" : "HHdK2z8XHjkjq7A1AzQFr7LHAVosx4uwkb6eBNzG5prwfxYEBd1dqI2oW0QN6SAg"
-    },
-    "data" : {
-        "action" : "signup",
-        "data" : {
-            "data" : {
-                "user_f_name" : "tuttu",
-                "user_m_name" : null, 
-                "user_l_name" : "roy",
-                "user_email" : "ajsashu@gmail.com",
-                "user_password" : "gaaaaaaaaaaaaaaaaaata",
-                "user_security_question" : null,
-                "user_security_answer" : null
-            }
-        }
-    }
-}
-
-//   api_call = {
-//     "api" : {
-//       "version" : "1.0",
-//       "auth" : "7BtnG96eHgTe0W5ssKMXJ7PhKldUIcf6oGQ1v3EI8pOYJVACN5Om94AX3ncaY41r"
-//     },
-//     "data" : {
-//       "action" : "signup",
-//       "data" : {
-//         "hash" : "b'\xa1\x9a]\xc9\xa3$\xce\xf7\xa8\xc8[\x1b\xbe\x8b\x82\x07\xa5\xb2X\xd12\x18\x08w\xb9\x8b\x90Je\xe5\tG'",
-//         "data" : {
-//           "user_f_name" : "Souriya",
-//           "user_m_name" : null ,
-//           "user_l_name" : "Roy",
-//           "user_email" : "souriyaroy1998@gmail.com",
-//           "user_password" : "anything_inserted_here69",
-//           "user_security_question" : "Home town?",
-//           "user_security_answer" : "Kolkata."
-//       }
-//     }
-//   }
-// }
-
-//   api_call = {
-//     "api" : {
-//         "version" : "1.0",
-//         "auth" : "Z562uqJET7ZKykuxiPiD2D18k6CUG5Z8eZafooAB33Fkus33FCObv75Idf6pup4C"
-//     },
-//     "data" : {
-//         "action" : "read",
-//         "data" : {
-//             "hash": "lt4yg3rhPcvS19OrhqfprSoIK1vPIVfpuoDkb4CrxXJS3Y4qiUgzkrCPJ41wq7Qr"
-//             //"user_id" : ["a",1,2,3,4,5,12,13]
-//         }
-//     }
-// }
-
   constructor(private user : UsersdataService) {
+    this.user.getData().subscribe(data => {
+      this.data = data
+    })
     // this.user.getData().subscribe(data => {
     //   this.data = data
     // })
@@ -76,9 +22,10 @@ export class APICallComponent implements OnInit {
   }
   
   SubmitAPI(){
-    this.user.postData(this.api_call).subscribe(data => {
-         console.warn(data);
-         console.warn(data['data']['hash']); 
+    
+    // this.user.postData(this.api_call).subscribe(data => {
+    //      console.warn(data);
+    //      console.warn(data['data']['hash']); 
 
          //string hash = data[data][hash]
          //cookie.set('init',hash,12/8/21)
@@ -89,7 +36,7 @@ export class APICallComponent implements OnInit {
          //console.warn(this.json2)
     // this.user.postData(this.api_call).subscribe(data => {
     //   this.data = data
-    })
+    // })
   }
 
   // reqAPI(){

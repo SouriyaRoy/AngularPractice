@@ -1,0 +1,21 @@
+<h1>View works</h1>
+<!-- <button (click)="view_post()">View Post of specified ID</button> -->
+<table border="1" style="margin-left: 300px;" id="table" hidden>
+    <tr>
+        <td>UserId</td>
+        <td>PostId</td>
+        <td>Title</td>
+        <td>Status</td>
+    </tr>
+    <div *ngFor="let item of result">
+        <tr *ngIf = "this.param == item.userId">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.completed}}</td>
+        </tr>
+    </div>
+</table>
+<main>
+    <router-outlet></router-outlet>
+</main>
