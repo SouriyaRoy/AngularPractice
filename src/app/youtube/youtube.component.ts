@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class YoutubeComponent implements OnInit {
 
   constructor(private http : HttpClient) {
-    // let api_key = "AIzaSyBvHqjMoIwkVapC1lXrnONz0MIsSghDtCM"
     // let channel_id = "UCIPnPp27nvOVQmbmuz1ioyg"
     // //console.log(key,max,search)
     // // let y_link = "https://www.googleapis.com/youtube/v3/search?key=" + key +
