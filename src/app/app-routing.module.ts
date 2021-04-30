@@ -9,6 +9,7 @@ import { ErrorComponent } from './error/error.component'
 import { APICallComponent } from './api-call/api-call.component';
 import { FeedComponent } from './feed/feed.component'
 import { ViewsComponent } from './views/views.component'
+import { YoutubeComponent } from './youtube/youtube.component'
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path:'feed',
     component:FeedComponent
+  },
+  {
+    path:'youtube',
+    component:YoutubeComponent
   },
   {
     path:'views/:id',

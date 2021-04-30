@@ -22,6 +22,8 @@ import { Lazy2Component } from './lazy2/lazy2.component';
 import { PracFormModule } from './prac-form/prac-form.module';
 import { FeedComponent } from './feed/feed.component';
 import { ViewsComponent } from './views/views.component';
+import { YoutubeComponent } from './youtube/youtube.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 //import { ModularRoutingModule } from './modular-routing/modular-routing.module'
 //import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
 
@@ -40,6 +42,7 @@ import { ViewsComponent } from './views/views.component';
     Lazy2Component,
     FeedComponent,
     ViewsComponent,
+    YoutubeComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { ViewsComponent } from './views/views.component';
     HttpClientModule,
     FormsModule,
     PracFormModule,
+    YouTubePlayerModule,
     //ModularRoutingModule,
     //ModularRouting2Module,
   ],
