@@ -8,7 +8,7 @@
         <td>Status</td>
     </tr>
     <div *ngFor="let item of result">
-        <tr *ngIf = "this.param == item.userId">
+        <tr *ngIf = "this.identity == item.userId">
             <td>{{item.userId}}</td>
             <td>{{item.id}}</td>
             <td>{{item.title}}</td>

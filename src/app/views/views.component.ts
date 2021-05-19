@@ -10,7 +10,7 @@ import { UsersdataService } from '../users/usersdata.service';
 export class ViewsComponent implements OnInit {
 
   result
-  param : number
+  identity : number
   // view_post(){
     
   // }
@@ -24,8 +24,8 @@ export class ViewsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       console.warn(params.id)
-      this.param = params.id
-      console.warn("This is params of class " + this.param)
+      this.identity = params.id
+      console.warn("This is params of class " + this.identity)
     })
     let p = document.getElementById('table')
     p.removeAttribute('hidden')
