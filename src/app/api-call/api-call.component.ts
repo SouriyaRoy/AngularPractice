@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersdataService } from 'src/app/users/usersdata.service'
+import { NgxSpinnerService } from 'ngx-spinner'
 
 @Component({
   selector: 'app-api-call',
@@ -10,10 +11,16 @@ export class APICallComponent implements OnInit {
 
   public data
   public json; json2 
+  public loading = false
 
-  constructor(private user : UsersdataService) {
+  constructor(private user : UsersdataService, private spinner : NgxSpinnerService) {
+    this.loading = true
     this.user.getData().subscribe(data => {
+      this.loading = false
       this.data = data
+    }, (error) => {
+      console.error(error)
+      this.loading = false
     })
     // this.user.getData().subscribe(data => {
     //   this.data = data
@@ -22,21 +29,6 @@ export class APICallComponent implements OnInit {
   }
   
   SubmitAPI(){
-    
-    // this.user.postData(this.api_call).subscribe(data => {
-    //      console.warn(data);
-    //      console.warn(data['data']['hash']); 
-
-         //string hash = data[data][hash]
-         //cookie.set('init',hash,12/8/21)
-
-         //this.json = JSON.stringify(this.data)
-         //console.warn(this.json)
-         //this.json2 = JSON.parse(this.data)
-         //console.warn(this.json2)
-    // this.user.postData(this.api_call).subscribe(data => {
-    //   this.data = data
-    // })
   }
 
   // reqAPI(){
@@ -44,11 +36,10 @@ export class APICallComponent implements OnInit {
   // }
   
   ngOnInit(): void {
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // }, 5000);
   }
 
 }
-
-// this.user.getData().subscribe(data => {
-//   console.warn(data);
-//   this.api = data;
-// })

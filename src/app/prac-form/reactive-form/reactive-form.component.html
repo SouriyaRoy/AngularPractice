@@ -25,3 +25,13 @@
         <button type="submit" class="btn btn-primary" [disabled] = "!loginForm.valid">Submit</button>
     </form>
 </div>
+
+<main>
+    <!-- <ngx-spinner></ngx-spinner> -->
+    <router-outlet></router-outlet>
+    <ngx-loading
+        [show]="loading"
+        [config]="{ backdropBorderRadius: '3px' }"
+    >
+    </ngx-loading>
+</main>

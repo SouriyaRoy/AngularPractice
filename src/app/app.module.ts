@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
@@ -24,6 +24,8 @@ import { FeedComponent } from './feed/feed.component';
 import { ViewsComponent } from './views/views.component';
 import { YoutubeComponent } from './youtube/youtube.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxLoadingModule } from 'ngx-loading'
 //import { ModularRoutingModule } from './modular-routing/modular-routing.module'
 //import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
 
@@ -56,10 +58,13 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     FormsModule,
     PracFormModule,
     YouTubePlayerModule,
+    NgxSpinnerModule,
+    NgxLoadingModule.forRoot({})
     //ModularRoutingModule,
     //ModularRouting2Module,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
