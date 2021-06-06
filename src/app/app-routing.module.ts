@@ -10,6 +10,7 @@ import { APICallComponent } from './api-call/api-call.component';
 import { FeedComponent } from './feed/feed.component'
 import { ViewsComponent } from './views/views.component'
 import { YoutubeComponent } from './youtube/youtube.component'
+import { FileHandlingComponent } from './file-handling/file-handling.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path:'views/:id',
     component:ViewsComponent
+  },
+  {
+    path:'file-handling',
+    component:FileHandlingComponent
   },
   // {
   //   path : '**', //wildcard, when a route is not found this page opens by default
