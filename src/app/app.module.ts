@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { UsersModule } from './users/users.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,9 +25,8 @@ import { ViewsComponent } from './views/views.component';
 import { YoutubeComponent } from './youtube/youtube.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { NgxLoadingModule } from 'ngx-loading'
-//import { ModularRoutingModule } from './modular-routing/modular-routing.module'
-//import { ModularRouting2Module } from './modular-routing-2/modular-routing-2.module'
+import { NgxLoadingModule } from 'ngx-loading';
+import { FileHandlingComponent } from './file-handling/file-handling.component'
 
 @NgModule({
   declarations: [
@@ -45,6 +44,7 @@ import { NgxLoadingModule } from 'ngx-loading'
     FeedComponent,
     ViewsComponent,
     YoutubeComponent,
+    FileHandlingComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +56,7 @@ import { NgxLoadingModule } from 'ngx-loading'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     PracFormModule,
     YouTubePlayerModule,
     NgxSpinnerModule,
