@@ -28,5 +28,14 @@
 </table>
 <main>
     <router-outlet></router-outlet>
+    <ngx-loading
+        [show]="loading"
+        [config]="{ backdropBorderRadius: '3px' }"
+    >
+    </ngx-loading>
+    <!-- <ngx-spinner
+        template="<img src='https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif'/>"
+    >
+    </ngx-spinner> -->
 </main>
 <!-- <a routerLink = 'views,{{item.userId}}'></a> -->
